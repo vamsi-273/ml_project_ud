@@ -21,7 +21,7 @@ from src.utils import save_object,evaluate_models
 
 @dataclass
 class ModelTrainerConfig:
-    trained_model_file_path = os.path.join('artifact','model.pkl')
+    trained_model_file_path = os.path.join('artifacts','model.pkl')
 
 class ModelTrainer:
     def __init__(self):
@@ -99,6 +99,11 @@ class ModelTrainer:
                 raise CustomException("No best model found")
             
             logging.info(f"Best found model on both training and testing dataset")
+
+            save_object(
+                file_path=self.model_trainer_config.trained_model_file_path,
+                obj=best_model
+            )
 
             predicted=best_model.predict(X_test)
 
