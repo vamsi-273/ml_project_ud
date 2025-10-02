@@ -4,6 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        color: #333;
+        overflow-y: auto;
+    }
+
+
+
+    .login {
+        background: #fff;
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        width: 400px;
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        color: #444;
+    }
+
+    legend {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #555;
+    }
+
+    .mb-3 {
+        margin: 15px 0;
+        text-align: left;
+    }
+
+    label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #333;
+    }
+
+    select, input[type="number"], .btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    select:focus, input[type="number"]:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 8px rgba(102, 126, 234, 0.5);
+    }
+
+    .btn {
+        background: #667eea;
+        color: white;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #5563d6;
+        transform: translateY(-2px);
+    }
+
+    h2 {
+        margin-top: 20px;
+        color: #222;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
 </head>
 <body>
     <div class="login">
@@ -111,7 +204,7 @@
         </div>
     </form>
     <h2>
-       THE  prediction is {{results}}
+       The Prediction is {{results}}
     </h2>
 </body>
 </html>
